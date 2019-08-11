@@ -4,11 +4,7 @@ import csv
 # * In this challenge, you are tasked with helping a small, rural town modernize its vote-counting process. (Up until now, Uncle Cleetus had been trustfully tallying them one-by-one, but unfortunately, his concentration isn't what it used to be.)
 election_data= os.path.join("Resources","election_data.csv")
 # * You will be give a set of poll data called [election_data.csv](PyPoll/Resources/election_data.csv). The dataset is composed of three columns: `Voter ID`, `County`, and `Candidate`. Your task is to create a Python script that analyzes the votes and calculates each of the following:
-with open("election_data.csv") as csvFile:
-    csvReader=csv.reader(csvFile,delimiter=",")
-    csvHeader=next(csvReader)
-
-with open (election_data,newline='') as csvFile:
+with open ("election_data.csv",newline='') as csvFile:
     csvReader=csv.reader(csvFile,delimiter=',')
     csvHeader=next(csvReader)
     tot=0
@@ -52,7 +48,7 @@ with open (election_data,newline='') as csvFile:
     print('Li: '+str(y3)+'% ' + '('+ str(x3)+')')
     print("O'Tooley: "+str(y4)+'% ' + '('+ str(x4)+')')
     print("Winner: " + winner)
-    output_path =os.path.join(r'C:\Users\Owner\Desktop\python-challenge\PyPoll\Resources','pyPollResult.txt')
+    output_path =os.path.join(r'C:\Users\Owner\Desktop\python-challenge\PyPoll\Resources','pyPollResult1.txt')
     with open(output_path, 'w') as newFile:
         newf=csv.writer(newFile)
         newf.writerow(['Election Results'])
